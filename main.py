@@ -5,8 +5,6 @@ import random
 from time import ctime # get time details
 import webbrowser # open browser
 import yfinance as yf # to fetch financial data
-import ssl
-import certifi
 import time
 import os # to remove created audio files
 
@@ -21,6 +19,7 @@ def there_exists(terms):
             return True
 
 r = sr.Recognizer() # initialise a recogniser
+
 # listen for audio and convert it to text:
 def record_audio(ask=False):
     with sr.Microphone() as source: # microphone as source
@@ -37,7 +36,7 @@ def record_audio(ask=False):
         print(f">> {voice_data.lower()}") # print what user said
         return voice_data.lower()
 
-# get string and make a audio file to be played
+# get string and make a temporary audio file to be played
 def speak(audio_string):
     tts = gTTS(text=audio_string, lang='en') # text to speech(voice)
     r = random.randint(1,20000000)
