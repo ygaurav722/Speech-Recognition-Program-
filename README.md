@@ -21,7 +21,7 @@ This will solve your problem related to pyaudio.
 - What is your name ?
 - What time is it ?
 - Search on Google .
-- Tell about Weather .
+- Search for Stock & Prices . .
 - Search Location .
 - Exit
 
